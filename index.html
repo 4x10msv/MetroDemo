@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>地铁线路演示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>地铁线路演示</h1>
+    </div>
+
+    <div class="row">
+        <div class="column demo">
+            <svg id="demo-svg"></svg>
+        </div>
+        <div class="column control">
+            <div class="control-panel">
+                <div class="control-group1">
+                    <div class="control-group2">
+                        <span>当前选中：</span>
+                        <span id='current-node'></span>
+                    </div>
+                    <div class="control-group2">
+                        <input id="set-node1-button" type="button" value="设为站点1">
+                        <input id="set-node2-button" type="button" value="设为站点2">
+                    </div>
+                    <div class="control-group2">
+                        <input id="set-start-node-button" type="button" value="设为起点">
+                        <input id="set-end-node-button" type="button" value="设为终点">
+                    </div>
+                </div>
+                <hr>
+                <div class="control-group1">
+                    <div class="control-group2">
+                        <span>添加站点</span>
+                        <input id="add-node-button" type="button" value="添加">
+                        <span id="add-node-hint"></span>
+                    </div>
+                    <div class="control-group2">
+                        <label for="add-node-input">新站点名称</label>
+                        <input id="add-node-input" name="add-node-input" type="text">
+                    </div>
+                </div>
+                <hr>
+                <div class="control-group1">
+                    <div class="control-group2">
+                        <span>添加路线</span>
+                        <input id="add-link-button" type="button" value="添加">
+                        <span id="add-link-hint"></span>
+                    </div>
+                    <div class="control-group2">
+                        <span>站点1：</span>
+                        <span id='node1'></span>
+                    </div>
+                    <div class="control-group2">
+                        <span>站点2：</span>
+                        <span id='node2'></span>
+                    </div>
+                    <div class="control-group2">
+                        <span>所属线路号：</span>
+                        <select id="no-select" name="no-select">
+                            <option style="color:#1f77b4">1</option>
+                            <option style="color:#ff7f0e">2</option>
+                            <option style="color:#2ca02c">3</option>
+                            <option style="color:#d62728">4</option>
+                            <option style="color:#9467bd">5</option>
+                            <option style="color:#8c564b">6</option>
+                            <option style="color:#e377c2">7</option>
+                            <option style="color:#7f7f7f">8</option>
+                            <option style="color:#bcbd22">9</option>
+                            <option style="color:#17becf">10</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                <div class="control-group1">
+                    <div class="control-group2">
+                        <span>查询路线</span>
+                        <input id="inquery-route-button" type="button" value="查询">
+                        <input id="clear-route-button" type="button" value="清除">
+                    </div>
+                    <div class="control-group2">
+                        <span>起点：</span>
+                        <span id='start-node'></span>
+                    </div>
+                    <div class="control-group2">
+                        <span>终点：</span>
+                        <span id='end-node'></span>
+                    </div>
+                    <label for="info-area">查询结果</label>
+                    <textarea id="info-area" name="info-area" readonly="readonly" rows="5"></textarea>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/d3.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

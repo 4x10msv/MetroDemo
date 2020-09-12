@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+}
+
+.column.demo {
+    width: 75%;
+    text-align: center;
+}
+
+.column.control {
+    width: 25%;
+}
+
+.control-panel {
+    width: 80%;
+}
+
+.control-group1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.control-group2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.node circle {
+    stroke: grey;
+    stroke-width: 2px;
+    fill: white;
+}
+
+.node.active circle {
+    stroke-width: 4px;
+}
+
+.node text {
+    font: outline;
+}
+
+line.link {
+    stroke-width: 2px;
+}
+
+line.active {
+    stroke-width: 6px;
+}
+
+#demo-svg {
+    border-style: solid;
+    border-color: darkgray;
+}
+
+#info-area {
+    width: 100%;
+    resize: none;
+}
